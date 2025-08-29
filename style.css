@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #004080;
+    color: white;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.search-box input {
+    padding: 5px;
+}
+
+.search-box button {
+    padding: 5px 10px;
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* NAVIGATION */
+nav {
+    background: #0066cc;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background: white;
+    color: #0066cc;
+    border-radius: 5px;
+}
+
+/* LOGIN SECTION */
+.login-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+}
+
+.login-box {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-box a {
+    text-decoration: none;
+    color: #004080;
+    font-weight: bold;
+}
+
+/* VISION & MISSION */
+.vision-mission {
+    text-align: center;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.vision-mission h2 {
+    margin-bottom: 10px;
+    color: #004080;
+}
+
+.vision-mission p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

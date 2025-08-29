@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enrolled Course</title>
+    <script src="javascript.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .star {
+            font-size: 10vh;
+        }
+
+        .one {
+            color: rgb(255, 0, 0);
+        }
+
+        .two {
+            color: rgba(195, 169, 151, 0.611);
+        }
+
+        .three {
+            color: rgb(133, 135, 74);
+        }
+
+        .four {
+            color: rgb(255, 255, 0);
+        }
+
+        .five {
+            color: rgb(24, 159, 14);
+            background-color: rgb(220, 220, 37);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg"
+        style="background-image: linear-gradient(to right,white,#2196f3);color: white;">
+        <div class="container-fluid">
+            <img src="logo.png" width="100px" height="auto">
+        </div>
+    </nav>
+
+    <div class="container mb-5">
+        <p class="text-warning mt-3 mb-5" style="float: right;display: block">Required watch
+            time must me
+            completed in order to get certificate</p>
+    </div>
+
+    <div class="container mb-3 mt-5 border border-primary rounded-2 p-3" id="placeholder" style="display: none;">
+        <p class="placeholder-glow">
+            <span class="placeholder col-12 bg-primary"></span>
+        </p>
+
+        <p class="placeholder-wave">
+            <span class="placeholder col-8 bg-primary"></span>
+        </p>
+        <p class="placeholder-glow">
+            <span class="placeholder col-6 bg-primary"></span>
+        </p>
+
+        <p class="placeholder-wave">
+            <span class="placeholder col-4 bg-primary"></span>
+        </p>
+        <p class="placeholder-glow">
+            <span class="placeholder col-6 bg-primary"></span>
+        </p>
+
+        <p class="placeholder-wave">
+            <span class="placeholder col-8 bg-primary"></span>
+        </p>
+        <p class="placeholder-glow">
+            <span class="placeholder col-12 bg-primary"></span>
+        </p>
+    </div>
+    <div class="container border border-primary rounded-2 p-3 mb-3 mt-5" id="fetchTemplateData" style="display: none;">
+        <!--Fetching template 1-->
+    </div>
+
+
+    <center>
+        <div class="container border border-primary rounded-2 m-3 p-3" id="feedback" style="display: none;">
+            <div class="row">
+                <div class="col">
+                    <h2 style="color: #2196f3;">Rate us</h2>
+                    <span onclick="gfg(1)" class="star" id="1">★
+                    </span>
+                    <span onclick="gfg(2)" class="star" id="2">★
+                    </span>
+                    <span onclick="gfg(3)" class="star" id="3">★
+                    </span>
+                    <span onclick="gfg(4)" class="star" id="4">★
+                    </span>
+                    <span onclick="gfg(5)" class="star" id="5">★
+                    </span>
+                    <h3 id="output">
+
+                    </h3>
+                </div>
+                <div class="col">
+                    <h2 style="color: #2196f3;">Feedback</h2>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="feedbackText"></textarea>
+                        <label for="floatingTextarea">Comments</label>
+                    </div>
+                </div>
+            </div>
+    </center>
+    <button type="button" id="rateUs" class="btn btn-primary mt-4 mb-4" style="display: block;margin: 0 auto;">Rate
+        us</button>
+    <div class="spinner-border text-primary mt-2;mb-2" id="loader" style="display: none;margin: 0 auto;" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <button type="button" id="SaveFeedback" class="btn btn-success mt-4 mb-4" style="display:none;margin: 0 auto;">Save
+        Feedback</button>
+    <button type="button" id="cancle" class="btn btn-danger mt-4 mb-4"
+        style="display:none;margin: 0 auto;">Cancle</button>
+    <button type="button" id="getCertificate" class="btn btn-success mt-4 mb-4"
+        style="display: block;margin: 0 auto;">Get
+        Certificate</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+    <script>
+        function gfg(n) {
+            for (var i = 1; i <= 5; i++) {
+                document.getElementById(i).style.color = "black";
+                document.getElementById("output").innerHTML = "Rating is : 0/5";
+            }
+            for (var i = 1; i <= n; i++) {
+                document.getElementById(i).style.color = "rgb(220, 220, 37)";
+                document.getElementById("output").innerHTML = "Rating is :" + i + "/5";
+            }
+            localStorage.setItem("rating", n)
+        }
+    </script>
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+        import { getFirestore, collection, addDoc, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyCskC8FgXJxC48XzpCDRVmE9Kng2OyAbpk",
+            authDomain: "open-curriculum-de09c.firebaseapp.com",
+            projectId: "open-curriculum-de09c",
+            storageBucket: "open-curriculum-de09c.appspot.com",
+            messagingSenderId: "425347625827",
+            appId: "1:425347625827:web:5603db72da26bfe87ad956",
+            measurementId: "G-S9YVNWDKBT"
+        };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+        const db = getFirestore(app);
+        getData()
+        async function getData() {
+            document.getElementById("placeholder").style.display = "block";
+            try {
+                const docRef = doc(db, "Teachers", localStorage.getItem("tempDataId"), localStorage.getItem("tempCardId"), "Course");
+                const docSnap = await getDoc(docRef);
+                if (docSnap.exists()) {
+                    const data = docSnap.data();
+                    console.log("Document data:", docSnap.data());
+                    document.getElementById("fetchTemplateData").style.display = "block";
+                    document.getElementById("placeholder").style.display = "none";
+
+                    document.getElementById("fetchTemplateData").innerHTML = `<div class="container">
+                    <h1>${data.courseName}</h1>
+        <p>Category: ${data.courseCategory}</p>
+        <div class="container border rounded-2 p-3"">
+            <div class="col-md-8">
+                <h3>Description</h3>
+                <p style="text-align:justify">
+                   ${data.courseDescription}
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3>Details</h3>
+                <ul>
+                    <li><strong>Duration:</strong> ${data.courseDuration}</li>
+                    <li><strong>Difficulty:</strong> ${data.difficultyLevel}</li>
+                    <li><strong>Prerequisites:</strong> ${data.prerequisites}</li>
+                    <li><strong>Instructor(s):</strong> ${data.instructorNames}</li>
+                    <li><strong>Resources:</strong> ${data.resources}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container border rounded-2 p-3 mt-3">
+        <h3>Course Content</h3>
+        ${data.description}
+        </div>
+        <div class="border rounded-2 p-3 mt-3">
+            <h3>Lecture Materials</h3>
+            <ul>
+                <li><a href="#">Lecture 1 - ${data.lectureMaterials}</a></li>
+                <li><a href="#">Lecture 2 - Title</a></li>
+                <!-- List lecture materials here with links to view/download -->
+            </ul>
+        </div>
+        <div class="container border rounded-2 p-3 mt-3">
+            <h3>Video Content</h3>
+            <iframe width="560" height="315" src="${data.videoContent}" frameborder="0"
+                allowfullscreen></iframe>
+            <!-- Display video content or embed links here -->
+        </div>
+        </div>`
+                } else {
+                    document.getElementById("placeholder").style.display = "none";
+                    console.log("No Document found")
+                }
+            } catch (error) {
+                document.getElementById("placeholder").style.display = "none";
+                console.log(error)
+            }
+        }
+        document.getElementById("rateUs").addEventListener("click", () => {
+            document.getElementById("rateUs").style.display = "none";
+            document.getElementById("feedback").style.display = "block";
+            document.getElementById("SaveFeedback").style.display = "block";
+            document.getElementById("cancle").style.display = "block";
+        })
+        document.getElementById("cancle").addEventListener("click", () => {
+            document.getElementById("rateUs").style.display = "block";
+            document.getElementById("feedback").style.display = "none";
+            document.getElementById("SaveFeedback").style.display = "none";
+            document.getElementById("cancle").style.display = "none";
+        })
+        document.getElementById("SaveFeedback").addEventListener("click", async () => {
+            document.getElementById("loader").style.display = "block";
+            var suggestionName = "suggestion" + Math.floor(Math.random() * 10000);
+            var ratingName = "rating" + Math.floor(Math.random() * 10000);
+            const data = {
+                [suggestionName]: document.getElementById("feedbackText").value,
+                [ratingName]: localStorage.getItem("rating")
+            }
+            try {
+                const docRef1 = doc(db, "Teachers", localStorage.getItem("tempDataId"), localStorage.getItem("tempCardId"), "Course", "CourseFeedback", "Rating&Feedback");
+                await setDoc(docRef1, data, { merge: true });
+                alert("We Appriciate you rating and feedback");
+                document.getElementById("loader").style.display = "none";
+                window.location.replace("studentDashboard.html");
+            } catch (error) {
+                console.log(error);
+                document.getElementById("loader").style.display = "none";
+                alert("We have some error while loading");
+            }
+        })
+
+        let timeSpent;
+        let interval;
+
+        document.addEventListener("DOMContentLoaded", () => {
+            timeSpent = localStorage.getItem('elapsedTime');
+
+            if (!timeSpent) {
+                fetchTimeSpentFromDB();
+            } else {
+                timeSpent = parseInt(timeSpent, 10);
+                startTimer();
+            }
+
+            window.onbeforeunload = () => {
+                saveTimeAndClearInterval();
+            };
+
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'hidden') {
+                    saveTimeAndClearInterval();
+                } else if (document.visibilityState === 'visible') {
+                    startTimer();
+                }
+            });
+        });
+
+        function startTimer() {
+            interval = setInterval(() => {
+                timeSpent++;
+                console.log(timeSpent);
+                localStorage.setItem('elapsedTime', timeSpent.toString());
+                setTimeSpend();
+            }, 1000);
+        }
+
+        function saveTimeAndClearInterval() {
+            clearInterval(interval);
+            localStorage.setItem('elapsedTime', timeSpent.toString());
+            setTimeSpend();
+        }
+
+        async function fetchTimeSpentFromDB() {
+            const courseName = localStorage.getItem("tempCardId");
+            const docRef = doc(db, "Student", localStorage.getItem("dataId"), "EnrolledCourseTimeSpend", "TimeSpend");
+            const docSnap = await getDoc(docRef);
+            // After fetching:
+            if (docSnap.exists()) {
+                const docData = docSnap.data();
+                const timeSpentFromDB = docData[courseName];
+
+                if (timeSpentFromDB) {
+                    localStorage.setItem('elapsedTime', timeSpentFromDB.toString());
+                    timeSpent = parseInt(timeSpentFromDB, 10);
+                    startTimer();
+                } else {
+                    startTimer();
+                }
+            }
+        }
+
+        async function setTimeSpend() {
+            const courseName = localStorage.getItem("tempCardId");
+            const timeSpendData = {
+                [courseName]: timeSpent.toString()
+            };
+
+            try {
+                await setDoc(doc(db, "Student", localStorage.getItem("dataId"), "EnrolledCourseTimeSpend", "TimeSpend"), timeSpendData, { merge: true });
+                console.log("Saved successfully");
+            } catch (error) {
+                console.error('Error adding document: ', error);
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

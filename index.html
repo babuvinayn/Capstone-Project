@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="homePage_final.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="topbar text-light p-2 top-section">
+        <p class="m-0 welcome-text"><i class="fas fa-graduation-cap"></i> WELCOME TO AICTE MODEL CURRICULUM PORTAL</p>
+        <div id="google_translate_element"></div>
+    </div>
+
+    <div class="top-banner-background">
+        <div class="container-fluid d-flex justify-content-between align-items-center p-3">
+            <div class="d-flex align-items-center">
+                <img src="AICTE Logo.png" alt="Logo" style="height:60px;">
+                <div class="logo-text ms-3">
+                    <span>अखिल भारतीय तकनीकी शिक्षा परिषद</span><br>
+                    <span>All India Council For Technical Education</span>
+                </div>
+            </div>
+            <form class="d-flex" action="https://www.google.com/search" method="get" target="_blank">
+                <input type="hidden" name="sitesearch" value="aicte-india.org">
+                <input class="form-control me-2" type="search" placeholder="Search" name="q">
+                <button class="btn btn-dark" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#0A1F44;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">AICTE Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#AboutUs">AboutUs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Notification">Announcements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#footer-contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center banner-section">
+        <div class="container py-5">
+            <i class="fas fa-book-reader banner-icon mb-4"></i>
+            <h1 class="display-5 fw-bold">AICTE Model Curriculum</h1>
+            <p class="lead mb-4">Fostering **excellence in technical education** for a skilled India.</p>
+            <p class="lead mb-4 banner-sub-text">
+                All India Council for Technical Education (AICTE) was set up in November 1945 as a national-level Apex Advisory Body to promote development in the country in a coordinated and integrated manner.
+            </p>
+            <a href="stakeholder.html" class="btn btn-primary btn-lg custom-btn-primary">Get Started <i class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+
+    <div class="container-fluid my-5">
+        <div class="row d-flex justify-content-center">
+            
+            <!-- QUICK LINKS SECTION -->
+            <div class="col-md-3 p-3 rounded shadow quick-links-section">
+                <h4 class="quick-links-title">Quick Links</h4>
+                <div class="quick-links-list">
+                    <a href="https://vidyanjali-he.education.gov.in/" class="quick-link-item" target="_blank">Vidyanjali-HE</a>
+                    <a href="https://ekumbh.aicte-india.org/" class="quick-link-item" target="_blank">eKUMBH Portal</a>
+                    <a href="https://internship.aicte-india.org/" class="quick-link-item" target="_blank">AICTE Internship Portal</a>
+                    <a href="https://atalacademy.aicte.gov.in/" class="quick-link-item" target="_blank">ATAL Academy</a>
+                    <a href="https://www.aicte-india.org/bulletins/policies-and-reforms" class="quick-link-item" target="_blank">Policies & Reforms</a>
+                    <a href="https://fdp-si.aicte-india.org/" class="quick-link-item" target="_blank">FDP SI Web portal</a>
+                    <a href="https://aicte.gov.in/schemes/KARMA" class="quick-link-item" target="_blank">AICTE KARMA</a>
+                    <a href="https://www.aicte-india.org/bulletins/aicte-magazines" class="quick-link-item" target="_blank">AICTE Connect Magazines</a>
+                </div>
+            </div>
+
+            <!-- NEW FEATURED PROJECTS SECTION -->
+            <div class="col-md-3 p-3 rounded shadow featured-projects-section">
+                <h4 class="featured-projects-title">Featured Projects</h4>
+                <hr>
+                <div class="project-card">
+                    <i class="fas fa-microscope project-icon"></i>
+                    <h5>AICTE-Approved Research</h5>
+                    <p>Discover groundbreaking research and innovation from top technical institutes.</p>
+                    <a href="project_details.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                </div>
+                <div class="project-card mt-3">
+                    <i class="fas fa-users-gear project-icon"></i>
+                    <h5>Student-Led Innovations</h5>
+                    <p>Highlighting student projects that solve real-world problems and drive change.</p>
+                    <a href="project_details.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                </div>
+            </div>
+
+            <!-- ANNOUNCEMENTS SECTION -->
+            <div class="col-md-3 bg-light p-3 rounded shadow announcements-section" id="Notification">
+                <h4 class="text-primary">Announcements</h4>
+                <hr>
+                <marquee direction="up" behavior="scroll" scrollamount="4" scrolldelay="1" onmouseover="this.stop()" onmouseout="this.start()">
+                    <p><img src="notice.png" alt="" class="notice-icon"><a href="https://www.aicte-india.org/bulletins/Approval-Process-Handbook-2024-27" target="_blank" class="announcement-link">Approval Process Handbook 2024-27</a></p>
+                    <p><img src="notice.png" alt="" class="notice-icon"><a href="https://www.aicte-india.org/bulletins/public-notices" target="_blank" class="announcement-link">Public Notice for Admission</a></p>
+                    <p><img src="notice.png" alt="" class="notice-icon"><a href="https://www.aicte-india.org/bulletins/revised-academic-calendar" target="_blank" class="announcement-link">Revised Academic Calendar</a></p>
+                    <p><img src="notice.png" alt="" class="notice-icon"><a href="https://www.aicte-india.org/bulletins/quiz" target="_blank" class="announcement-link">Sardar Unity Trinity Quiz</a></p>
+                    <p><img src="notice.png" alt="" class="notice-icon"><a href="https://www.aicte-india.org/bulletins/guidelines-for-internship" target="_blank" class="announcement-link">New Guidelines for Student Internships</a></p>
+                </marquee>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container my-5 about-us-section" id="AboutUs">
+        <h2 class="text-center text-primary">About Us</h2>
+        <p class="text-center">
+            All India Council for Technical Education (AICTE) is a statutory body and a national-level council for technical education, under Department of Higher Education, Ministry of Education. Established in November 1945 as an advisory body, it was later given statutory status in 1987 by an Act of Parliament to regulate and coordinate technical education throughout India.
+        </p>
+        <p class="text-center">
+            The council’s mission is to promote and develop quality technical education and management education in India in a coordinated and integrated manner. It is responsible for planning, formulation, and maintenance of norms and standards, accreditation of institutions, providing grants-in-aid, and monitoring and evaluation of the education system.
+        </p>
+        <div class="d-flex justify-content-around flex-wrap">
+            <div class="card p-3 shadow" style="width:18rem;">
+                <img src="VissionImage.png" class="card-img-top">
+                <h5 class="mt-2">Our Vision</h5>
+                <p>Promote quality, set high standards, and ensure excellence in technical education.</p>
+            </div>
+            <div class="card p-3 shadow" style="width:18rem;">
+                <img src="mission.png" class="card-img-top">
+                <h5 class="mt-2">Our Mission</h5>
+                <p>Develop policies, support institutions, and foster research in technical education.</p>
+            </div>
+            <div class="card p-3 shadow" style="width:18rem;">
+                <img src="goals.png" class="card-img-top">
+                <h5 class="mt-2">Our Goals</h5>
+                <p>Increase intake, improve quality, promote innovation and entrepreneurship.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-light p-4 footer-section" id="footer-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Nelson Mandela Marg, Vasant Kunj, New Delhi-110070
+                    </p>
+                    <p>
+                        <i class="fas fa-phone"></i> +91-11-26131576-78, 80
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope"></i> <a href="mailto:helpline@aicte-india.org" class="footer-link">helpline@aicte-india.org</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5 class="footer-title">Follow Us</h5>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <p class="mt-3 m-0">&copy; AICTE 2023. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'hi,mr,pa,ta,te,bn,gu,kn,ml,or',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

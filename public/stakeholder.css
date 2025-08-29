@@ -1,0 +1,182 @@
+/* General Body Styles - Match homepage */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #F5F9FF;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Back Button Style */
+.back-button-container {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 1000;
+}
+
+.back-button {
+    text-decoration: none;
+    color: #0A1F44;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.back-button:hover {
+    color: #3B82F6;
+}
+
+.back-button i {
+    font-size: 1.2rem;
+}
+
+/* Main Content Container */
+.role-selection-container {
+    padding: 60px 20px;
+    max-width: 1200px;
+}
+
+.role-selection-title {
+    color: #0A1F44;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.role-card {
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.role-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.role-icon {
+    font-size: 5rem;
+    color: #3B82F6;
+    margin-bottom: 25px;
+    background-color: #FDF7E4;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px auto;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.role-title {
+    color: #0A1F44;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.role-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* Custom button styling - Matches homepage custom-btn-primary */
+.custom-btn-primary {
+    background-color: #3B82F6;
+    border-color: #3B82F6;
+    color: white;
+    font-weight: bold;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-btn-primary:hover {
+    background-color: #0A1F44;
+    border-color: #0A1F44;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Google Sign-In Button */
+.google-btn {
+    background-color: #4285F4;
+    color: white;
+    border-radius: 50px;
+    border: 1px solid #4285F4;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.google-btn:hover {
+    background-color: #357ae8;
+    border-color: #357ae8;
+}
+
+.google-btn i {
+    margin-right: 8px;
+}
+
+.register-link {
+    font-size: 0.95rem;
+    margin-top: 15px;
+    color: #777;
+}
+
+.register-link a {
+    color: #3B82F6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+    color: #0A1F44;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .role-selection-title {
+        font-size: 2.2rem;
+    }
+    .role-icon {
+        font-size: 4rem;
+        width: 100px;
+        height: 100px;
+    }
+    .role-title {
+        font-size: 1.5rem;
+    }
+    .role-description {
+        font-size: 0.9rem;
+    }
+    .role-selection-container {
+        padding: 40px 15px;
+    }
+    .back-button-container {
+        top: 15px;
+        left: 15px;
+    }
+}

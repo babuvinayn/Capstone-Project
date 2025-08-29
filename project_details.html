@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Project Details</title>
+    <link rel="stylesheet" href="homePage_final.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="topbar text-light p-2 top-section">
+        <p class="m-0 welcome-text"><i class="fas fa-graduation-cap"></i> WELCOME TO AICTE MODEL CURRICULUM PORTAL</p>
+        <div id="google_translate_element"></div>
+    </div>
+    <div class="top-banner-background">
+        <div class="container-fluid d-flex justify-content-between align-items-center p-3">
+            <div class="d-flex align-items-center">
+                <img src="AICTE Logo.png" alt="Logo" style="height:60px;">
+                <div class="logo-text ms-3">
+                    <span>अखिल भारतीय तकनीकी शिक्षा परिषद</span><br>
+                    <span>All India Council For Technical Education</span>
+                </div>
+            </div>
+            <form class="d-flex" action="https://www.google.com/search" method="get" target="_blank">
+                <input type="hidden" name="sitesearch" value="aicte-india.org">
+                <input class="form-control me-2" type="search" placeholder="Search" name="q">
+                <button class="btn btn-dark" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#0A1F44;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">AICTE Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#AboutUs">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Notification">Announcements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stakeholder.html">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container my-5 project-details-container">
+        <h1 class="text-center text-primary mb-4">AICTE-Approved Research Project: Bio-Tech Innovations</h1>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p class="lead">
+                    This project focuses on developing sustainable bio-fuel from algae. It is an AICTE-approved initiative led by students and faculty from the Department of Biotechnology.
+                </p>
+                <hr>
+                <h3 class="text-primary mt-4">Project Highlights</h3>
+                <ul>
+                    <li>**Institute:** National Institute of Technology, Bhopal</li>
+                    <li>**Faculty Lead:** Dr. Ananya Sharma</li>
+                    <li>**Status:** In Progress (Year 2 of 3)</li>
+                    <li>**Objective:** To reduce dependency on fossil fuels by creating a cost-effective bio-fuel source.</li>
+                </ul>
+                <h3 class="text-primary mt-4">Project Description</h3>
+                <p>
+                    The research team has successfully identified a new strain of algae with a high lipid content. The next phase involves optimizing the cultivation process and testing the scalability of the bio-fuel production. The project has received an AICTE grant of ₹50 lakhs for equipment and research personnel.
+                </p>
+                <h3 class="text-primary mt-4">Technologies Used</h3>
+                <div class="d-flex flex-wrap">
+                    <span class="badge bg-secondary m-1">Python</span>
+                    <span class="badge bg-secondary m-1">Machine Learning</span>
+                    <span class="badge bg-secondary m-1">Algal Bioreactors</span>
+                    <span class="badge bg-secondary m-1">Data Analysis</span>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-primary btn-lg custom-btn-primary">Back to Homepage</a>
+        </div>
+    </div>
+
+    <footer class="text-light p-4 footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Nelson Mandela Marg, Vasant Kunj, New Delhi-110070
+                    </p>
+                    <p>
+                        <i class="fas fa-phone"></i> +91-11-26131576-78, 80
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope"></i> <a href="mailto:helpline@aicte-india.org" class="footer-link">helpline@aicte-india.org</a>
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5 class="footer-title">Follow Us</h5>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <p class="mt-3 m-0">&copy; AICTE 2023. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'hi,mr,pa,ta,te,bn,gu,kn,ml,or',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

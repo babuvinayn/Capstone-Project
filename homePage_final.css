@@ -1,0 +1,404 @@
+/* GENERAL PAGE STYLE */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #F5F9FF;
+    color: #333;
+}
+
+/* HEADER */
+.top-banner-background {
+    background-color: #0A1F44; /* Clean dark blue color */
+}
+
+.logo-text {
+    color: white; /* Makes the text visible */
+}
+
+.logo-text span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* NAVIGATION */
+nav {
+    background: #0A2342;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1E90FF;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+/* UPDATED BANNER SECTION STYLING */
+.banner-section {
+    background: linear-gradient(135deg, #FDF7E4 0%, #F5E8C7 100%);
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    min-height: 250px; /* Smaller height for the banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px; /* Reduced padding */
+    border: 1px solid #E6D7AD;
+}
+
+.banner-section h1 {
+    font-size: 2.5rem; /* Smaller heading size */
+    color: #0A1F44;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.banner-section .lead {
+    color: #1E3A8A;
+    font-size: 1.1rem; /* Smaller lead text size */
+    margin-bottom: 15px;
+    font-weight: 500;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner-section .banner-sub-text {
+    font-size: 1rem; /* Smaller size for the paragraph */
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.banner-section .banner-icon {
+    font-size: 4rem; /* Smaller icon size */
+    color: #3B82F6;
+    display: block;
+    margin-bottom: 15px;
+    animation: bounceIn 1s ease-out;
+}
+
+/* Custom button styling */
+.custom-btn-primary {
+    background-color: #3B82F6;
+    border-color: #3B82F6;
+    color: white;
+    font-weight: bold;
+    padding: 10px 25px; /* Smaller button padding */
+    font-size: 1.1rem; /* Smaller button font size */
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-btn-primary:hover {
+    background-color: #0A1F44;
+    border-color: #0A1F44;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ABOUT SECTION */
+.about {
+    text-align: center;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.about h2 {
+    color: #0A2342;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* QUICK LINKS Enhancements */
+.quick-links-section {
+    background-color: #e0f2f7;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quick-links-title {
+    color: #0A1F44;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3B82F6;
+    padding-bottom: 10px;
+}
+
+.quick-links-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-link-item {
+    text-decoration: none;
+    color: #3B82F6;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 1px dotted #a8daec;
+    transition: all 0.3s ease;
+}
+
+.quick-link-item:last-child {
+    border-bottom: none;
+}
+
+.quick-link-item:hover {
+    color: #0A1F44;
+    padding-left: 10px;
+    background-color: #d0e8f2;
+}
+
+/* FOOTER */
+.footer-section {
+    background-color: #0A1F44;
+    color: white;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.footer-section .footer-title {
+    color: #3B82F6;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.footer-section .footer-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section .footer-link:hover {
+    color: #3B82F6;
+}
+
+.footer-section .social-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.footer-section .social-icon:hover {
+    color: #3B82F6;
+}
+
+/* Language Translator and Welcome Text Styling */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0A1F44;
+    padding: 8px 20px;
+}
+
+.welcome-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.welcome-text i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* BORDERS */
+.main-content-row > div {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.welcome-section,
+.announcements-section,
+.about-us-section {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Language Translator Positioning */
+.top-section .welcome-text {
+    flex-grow: 1;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.4rem; /* Larger font size */
+}
+
+#google_translate_element {
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+/* Featured Projects Section Styling */
+.featured-projects-section {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.featured-projects-title {
+    color: #0A1F44;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3B82F6;
+    padding-bottom: 10px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h5 {
+    color: #0A1F44;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.project-card .project-icon {
+    font-size: 2.5rem;
+    color: #3B82F6;
+}
+
+.btn-outline-primary {
+    color: #3B82F6;
+    border-color: #3B82F6;
+}
+
+.btn-outline-primary:hover {
+    background-color: #3B82F6;
+    color: white;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .banner-section h1 {
+        font-size: 2.5rem;
+    }
+    .banner-section .lead {
+        font-size: 1.2rem;
+    }
+    .banner-section .banner-icon {
+        font-size: 3.5rem;
+    }
+    .custom-btn-primary {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    header h1 {
+        font-size: 24px;
+    }
+    .footer-section {
+        text-align: center;
+    }
+    .footer-section .col-md-6 {
+        margin-bottom: 20px;
+    }
+
+    .top-section {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .top-section .welcome-text {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    #google_translate_element {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+/* Keyframe animation for icon */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.notice-icon {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.announcement-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
